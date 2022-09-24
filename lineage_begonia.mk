@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2020 The PixelExperience Project
+# Copyright (C) 2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -23,11 +24,11 @@ $(call inherit-product, device/xiaomi/begonia/device.mk)
 # Inherit from begonia interfaces makefile
 $(call inherit-product, device/xiaomi/begonia/mtk-interfaces.mk)
 
-# Inherit some PE source stuff
+# Inherit some LineageOS source stuff
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_USES_AOSP_RECOVERY := true
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 2340
@@ -35,7 +36,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := begonia
-PRODUCT_NAME := aosp_begonia
+PRODUCT_NAME := lineage_begonia
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 8 Pro
 PRODUCT_MANUFACTURER := Xiaomi
